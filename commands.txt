@@ -1,0 +1,25 @@
+pwd         Shows working directory
+ls          Shows files in the folder
+ctrl+l      Clean terminal
+ls -lh      Shows files in human readable way
+cd          Change directory
+cd ..       Go to previous level/folder
+ls -lSh     Shows file sorted by size and human readable
+tree        Tree view
+mkdir       Creates new directory
+touch       Creates new file
+mkdir d1 d2 Multiple directories in one line
+cp          Copy files
+mv f1 ..    Move file to previous level
+mv f1 f2    Rename file1 to file2 in the same directory 
+rm          Remove file
+rm -i       Interactive way to remove files
+rm -ri      Removes a directory in interactive way
+
+## Exploring Files ##
+head        Shows first 10 lines of a file
+head -n 15  Shows first 15 lines of a file
+tail        Shows last 10 lines of a file
+less        Explores the file interactively
+xdg-open    Open a file in 3rd party app
+
