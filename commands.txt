@@ -44,7 +44,7 @@ ls location >> file.txt 2>&1    Create/concatenates when a successful/failed exe
 ls ; mkdir abc ; cal        Execute sequentially
 ls & mkdir abc & cal        Execute in parallel
 mkdir test && cd test       Execute command conditionally (and condition) 
-mkdir test ||cd test       Execute command conditionally (or condition) 
+mkdir test ||cd test        Execute command conditionally (or condition) 
 
 ## Permissions ##
 whoami                      Who Am I
@@ -53,5 +53,13 @@ chmod u-r filename          Removes read permissions for the user
 su root                     Switch to root user
 sudo command                Execute command as a root user
 https://josenoriegaa.github.io/linux-file-system-permission-generator/index.html
+
+## Environment variables ##
+printenv                    Print all Environment variables
+echo $HOME                  Print HOME variable
+echo $PATH                  Print PATH variable
+code .bashrc                Open Bash configuration
+PATH=$PATH:/home/user/bin   In the bashrc file creates a new location in the PATH variable
+
 
 
