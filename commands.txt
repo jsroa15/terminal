@@ -52,5 +52,6 @@ chmod u+r filename          Adds read permissions for the user
 chmod u-r filename          Removes read permissions for the user
 su root                     Switch to root user
 sudo command                Execute command as a root user
+https://josenoriegaa.github.io/linux-file-system-permission-generator/index.html
 
 
