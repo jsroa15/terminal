@@ -26,4 +26,10 @@ xdg-open    Open a file in 3rd party app
 ## Commands ##
 alias l="ls -lh"    Create an alias for ls -lh (like a shorcut)
 
+## Wildcards ##
+*.txt
+*.py
+ls -f [[:upper:]]*  Search for files that start with Upper case
+
+
 
