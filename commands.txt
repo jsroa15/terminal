@@ -31,5 +31,26 @@ alias l="ls -lh"    Create an alias for ls -lh (like a shorcut)
 *.py
 ls -f [[:upper:]]*  Search for files that start with Upper case
 
+## Direction ##
+ls location >> file.txt     Crate a file .txt with content inside location
+ls anything 2> error.txt    Create a file when an error occurs. The >2 guarantee the file creation when there's an error
+ls location >> file.txt 2>&1    Create/concatenates when a successful/failed execution happens
+
+
+## Pipe Operator ##
+|
+
+## Chaining proccesses
+ls ; mkdir abc ; cal        Execute sequentially
+ls & mkdir abc & cal        Execute in parallel
+mkdir test && cd test       Execute command conditionally (and condition) 
+mkdir test ||cd test       Execute command conditionally (or condition) 
+
+## Permissions ##
+whoami                      Who Am I
+chmod u+r filename          Adds read permissions for the user
+chmod u-r filename          Removes read permissions for the user
+su root                     Switch to root user
+sudo command                Execute command as a root user
 
 
