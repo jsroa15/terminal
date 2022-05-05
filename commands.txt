@@ -61,5 +61,15 @@ echo $PATH                  Print PATH variable
 code .bashrc                Open Bash configuration
 PATH=$PATH:/home/user/bin   In the bashrc file creates a new location in the PATH variable
 
+## Search Commands ##
+which code                      Look for bin used in Vs code
+find ./ -name file file_name    Find a file_name 
+find ./ -type f -name *.log     Find all files with extension .log
+find ./ -size  20M              Find files with size>20
 
+## Grep ##
+grep -c the movies.csv          Count occurrences of the word the
+grep -ci the movies.csv         Same but ignoring case sentive
+grep -vi Towers movies.csv      Find everything different to Towers
+wc movies.csv                   Count words in the file
 
