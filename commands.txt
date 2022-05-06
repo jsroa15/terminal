@@ -73,3 +73,15 @@ grep -ci the movies.csv         Same but ignoring case sentive
 grep -vi Towers movies.csv      Find everything different to Towers
 wc movies.csv                   Count words in the file
 
+## Network Utilities ##
+ifconfig                        Info about my Network
+ping                            If a website is working or not 
+curl                            Extract html file from a web site
+wget                            
+traceroute                      All computers that are linked to access one website
+netstat -i                      Network statistics
+
+## Compress Files ##
+tar -cvzf ToCompress.tar.gz ToCompress             c(compress) v(verbose) z(G Zip) f(file)  ToCompres: a folder or file
+tar -xvzf ToCompress.tar.gz                         To extract the compressed file
+
