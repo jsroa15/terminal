@@ -30,15 +30,15 @@ alias l="ls -lh"    Create an alias for ls -lh (like a shorcut)
 *.txt
 *.py
 ls -f [[:upper:]]*  Search for files that start with Upper case
+? matches a single character, so 201?.txt will match 2017.txt or 2018.txt, but not 2017-01.txt.
+[...] matches any one of the characters inside the square brackets, so 201[78].txt matches 2017.txt or 2018.txt, but not 2016.txt.
+{...} matches any of the comma-separated patterns inside the curly brackets, so {*.txt, *.csv} matches any file whose name ends with .txt or .csv, but not files whose names end with .pdf
 
 ## Direction ##
 ls location >> file.txt     Crate a file .txt with content inside location
 ls anything 2> error.txt    Create a file when an error occurs. The >2 guarantee the file creation when there's an error
 ls location >> file.txt 2>&1    Create/concatenates when a successful/failed execution happens
 
-
-## Pipe Operator ##
-|
 
 ## Chaining proccesses
 ls ; mkdir abc ; cal        Execute sequentially
@@ -67,6 +67,9 @@ find ./ -name file file_name    Find a file_name
 find ./ -type f -name *.log     Find all files with extension .log
 find ./ -size  20M              Find files with size>20
 
+## Sort information ##
+sort                            By default it does this in ascending alphabetical order, but the flags -n and -r can be used to sort numerically and reverse the order of its output, while -b tells it to ignore leading blanks and -f tells it to fold case (i.e., be case-insensitive)
+
 ## Grep ##
 grep -c the movies.csv          Count occurrences of the word the
 grep -ci the movies.csv         Same but ignoring case sentive
@@ -87,7 +90,24 @@ wget
 traceroute                      All computers that are linked to access one website
 netstat -i                      Network statistics
 
+## Pipe Operator (Combine multiple commands) ##
+cut -d , -f 2 seasonal/summer.csv | grep -v Tooth | head -n1
+
 ## Compress Files ##
 tar -cvzf ToCompress.tar.gz ToCompress             c(compress) v(verbose) z(G Zip) f(file)  ToCompres: a folder or file
 tar -xvzf ToCompress.tar.gz                         To extract the compressed file
+
+## Loops ##
+for filename in seasonal/*.csv; do echo $filename; done
+
+## Create and modify files ##
+nano file_name                  Opens nano to modify files
+
+## Script files##
+script.sh
+bash script.sh    (this is to execute the script)
+nano count-records.sh
+$ bash count-records.sh seasonal/*.csv > num-records.out
+
+head -n $2 $1 | tail -n 1 | cut -d , -f $3
 
